@@ -42,7 +42,10 @@ test("programme enquiry retries API failures and completes the lead journey", as
 
   await dialog.getByRole("button", { name: "Continue" }).click();
   await expect(dialog.getByRole("heading", { name: "Help us point you to the right path." })).toBeVisible();
+  await expect(dialog.locator('input[name="organisation"]')).toHaveValue("");
+  await expect(dialog.locator('input[name="city"]')).toHaveValue("");
   await expect(dialog.locator('select[name="programme"]')).toHaveValue("AI product studio");
+
   await dialog.locator('select[name="persona"]').selectOption("Student");
   await dialog.locator('input[name="city"]').fill("Bengaluru");
   await dialog.locator('select[name="schedule"]').selectOption("Weekends");
@@ -50,10 +53,12 @@ test("programme enquiry retries API failures and completes the lead journey", as
   await expect(dialog.getByRole("alert")).toContainText("Temporary save issue");
   await expect(dialog.locator('select[name="programme"]')).toHaveValue("AI product studio");
 
+
   await dialog.getByRole("button", { name: "Send enquiry" }).click();
   await expect(dialog.getByRole("heading", { name: "Thank you." })).toBeVisible();
   await expect(dialog.getByText("Your enquiry was accepted by the prototype.")).toBeVisible();
   expect(contactAttempts).toBe(2);
   expect(detailAttempts).toBe(2);
 });
+
 

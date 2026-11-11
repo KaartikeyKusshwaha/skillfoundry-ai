@@ -40,3 +40,7 @@ The browser suite includes axe accessibility scans and the relevant interaction 
 ## Deployment
 
 Import this repository into Vercel as a Next.js project. Use the repository root with `pnpm install` and `pnpm build`. The AI carousel is a separate assignment deliverable.
+
+## Appearance
+Use the sun/moon control in the navigation to select light or dark mode. The site follows the device setting on first visit and saves an explicit selection in local storage. Native dropdowns, fields, cards and dialogs follow the selected theme. Browser tests cover both palettes, preference persistence and mobile switching.
+

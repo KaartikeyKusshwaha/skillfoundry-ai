@@ -38,3 +38,5 @@ The animal-care and education prototypes are separate websites: do not link
 their navigation or footers to one another. Keep full-width section backgrounds,
 and use only a few lightweight isometric illustrations where they support the
 care categories or learning steps; do not fill every section with imagery.
+
+Theme refinements: support saved light/dark selection, follow system preference initially, and preserve readable text, controls, menus and dialogs in both modes. Keep each brand palette coherent and the sites independent.

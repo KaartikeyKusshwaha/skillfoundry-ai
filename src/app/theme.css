@@ -1,0 +1,54 @@
+/* Theme surfaces are separate from decorative illustration fills. */
+:root { color-scheme:light; background:#FAF6EE; }
+:root[data-theme=dark] { color-scheme:dark; background:#101815; }
+.animals-theme { --ink:#153C32; --paper:#FAF8F2; --slate:#4E6058; --line:#CBD6CE; --surface:#FFFEFA; --soft:#E9F0E8; --accent:#A53925; --focus:#1F684B; }
+.learn-theme { --ink:#25203F; --paper:#FAF8F5; --slate:#605A71; --line:#D8D4E3; --surface:#FFFEFC; --soft:#EEEAF7; --accent:#5844B8; --focus:#5844B8; }
+.animals-theme,.learn-theme { background:var(--paper); color:var(--ink); }
+.animals-theme .animal-hero,.animals-theme .search-header { background:var(--soft); }
+.animals-theme .animal-footer,.animals-theme .provider-band,.learn-theme .learn-footer { background:var(--paper); }
+.learn-theme .curriculum-band,.learn-theme .prompt-result,.learn-theme .learn-hero-art { background:var(--soft); }
+.theme-toggle { flex:0 0 36px; width:36px; height:36px; display:grid; place-items:center; margin-left:auto; border:1px solid var(--line); border-radius:50%; color:var(--ink); background:var(--surface); cursor:pointer; }
+.theme-toggle:hover { border-color:var(--focus); }
+.theme-toggle:focus-visible { outline:3px solid var(--focus); outline-offset:3px; }
+.theme-toggle + .mobile-only { margin-left:0; }
+.privacy-theme-control { position:fixed; top:20px; right:24px; z-index:60; }
+:is(.animals-theme,.learn-theme) :is(input,select,textarea,option,optgroup) { color:var(--ink); background-color:var(--surface); border-color:var(--line); color-scheme:inherit; }
+:is(.animals-theme,.learn-theme) :is(input,textarea)::placeholder { color:var(--slate); opacity:1; }
+:is(.animals-theme,.learn-theme) :is(input,select,textarea):focus-visible { outline:2px solid var(--focus); outline-offset:2px; }
+html[data-theme=dark] .animals-theme { --ink:#E9F1EB; --paper:#101A16; --pine:#A5D2B9; --deep-pine:#15251E; --slate:#B3C5BA; --line:#385044; --surface:#1A2A22; --soft:#16271F; --accent:#FFA88D; --focus:#A5D2B9; --mist:#20372C; }
+html[data-theme=dark] .learn-theme { --ink:#F1EEF9; --paper:#17151F; --pine:#C7B9FF; --deep-pine:#211D31; --slate:#C1BACF; --line:#494158; --surface:#24202F; --soft:#211D31; --accent:#C7B9FF; --focus:#C7B9FF; --mist:#2B253C; }
+html[data-theme=dark] body { background:var(--paper,#17151F); color:#F1EEF9; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(h1,h2,h3,h4,p,span,em,strong,b,li,label,a,small,td,th,summary,button) { color:var(--ink)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(p,small,td,label,.hero-lede,.trust-line,.story-note,.programme-audience,.price-note,.footer-note,.availability-line,.provider-services,.art-kicker,.dialog-kicker) { color:var(--slate)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.site-nav,.site-nav .nav-links.open) { background:color-mix(in srgb,var(--paper) 88%,transparent)!important; border-color:var(--line); box-shadow:0 4px 28px #0003,inset 0 1px 0 #ffffff08; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.animal-hero,.search-header,.curriculum-band,.learn-hero-art,.prompt-result,.provider-band) { background:var(--soft)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.animal-footer,.learn-footer,.services-section,.outcomes-section,.programmes-section,.faq-section,.learn-hero) { background:var(--paper)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.search-module,.search-summary,.search-field,.open-toggle,.story-card,.care-story,.emergency-row,.search-provider-card,.empty-results,.map-panel,.map-label,.quick-view,.provider-drawer,.lead-dialog,.filter-sheet,.mobile-care-bar,.programme-card,.hero-art-paper,.build-screen,.cohort-pill,.open-provider-chip,.hero-slide-controls,.filter-chip,.species-filter,.sort-select,.step-icon,.view-toggle,.view-toggle button,.provider-tags span,.sample-tag,.story-icon,.provider-avatar,.availability,.programme-pricing-note) { background:var(--surface)!important; border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.category-stage,.build-stage,.learn-final,.programme-card.featured) { background:var(--soft)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(input,select,textarea,option,optgroup) { color:var(--ink)!important; background:var(--surface)!important; border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.editorial-title em,.overline,.hero-eyebrow,.learn-brand span,.text-link,.back-link,.verified,.service-icon,.story-tabs .active,.build-tabs button.active,.curriculum-layout li.active strong) { color:var(--accent)!important; }
+html[data-theme=dark] .animals-theme :is(.button-primary,.button-ink,.mobile-care-bar button,.mobile-care-bar a,.filter-chip.selected,.species-filter.chosen) { color:#10271C!important; background:#A5D2B9!important; }
+html[data-theme=dark] .learn-theme :is(.button-ink,.button-primary) { color:#211731!important; background:#C7B9FF!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.button-accent,.programme-badge) { color:#2A2008!important; background:#FFD171!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .button-danger,html[data-theme=dark] .animals-theme .emergency-call { color:#FFF5F1!important; background:#A62E25!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .button:before { background:#ffffff16!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.button-secondary,.button-ghost,.text-link,.story-action,.story-actions button,.emergency-directions) { color:var(--ink)!important; background:transparent!important; border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.service-card,.programme-card,.outcome-card):hover { background:var(--soft)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.hero-art-paper) { box-shadow:6px 9px 0 #383044,12px 18px 0 #2B2535,0 26px 36px #0003; border-color:var(--line); }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.button,.text-link,.icon-button,.service-card,.nav-links a):focus-visible { outline-color:var(--focus); }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .lead-error { color:#FFCCBE!important; background:#40241F!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .map-pin { background:var(--surface)!important; color:var(--ink)!important; border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .animal-mark { color:#11261C!important; background:#A5D2B9!important; }
+@media (max-width:700px) { .site-nav .container.nav-inner { gap:10px; }.theme-toggle { margin-left:auto; width:34px; height:34px; flex-basis:34px; }.site-nav .nav-links { margin-left:0; } }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .service-card { background:var(--paper)!important; border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.open-provider-chip,.hero-slide-controls,.art-spark,.story-bottom,.preview-main,.map-pin) { color:var(--ink)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .art-spark { background:var(--soft)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.provider-avatar,.map-label,.results-top,.quick-view,.drawer-close) { color:var(--ink)!important; }
+.site-nav .nav-links { margin-left:auto; margin-right:auto; }
+.site-nav .theme-toggle { margin-left:0; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :where(*) { border-color:var(--line)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.cohort-pill,.map-key,.product-top,.provider-preview,.results-top,.detail-row) { color:var(--ink)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.hero-slide-controls button,.secondary-action,.map-key) { color:var(--ink)!important; background:var(--surface)!important; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .hero-slide-dots button.active { background:var(--accent)!important; }
+html[data-theme=dark] .animals-theme .hero-photo img { filter:brightness(.88); }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .drawer-close { color:var(--ink)!important; background:var(--soft)!important; border:1px solid var(--line); }
