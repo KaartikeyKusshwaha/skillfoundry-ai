@@ -44,3 +44,7 @@ Import this repository into Vercel as a Next.js project. Use the repository root
 ## Appearance
 Use the sun/moon control in the navigation to select light or dark mode. The site follows the device setting on first visit and saves an explicit selection in local storage. Native dropdowns, fields, cards and dialogs follow the selected theme. Browser tests cover both palettes, preference persistence and mobile switching.
 
+
+## Visual assets
+The sculptural hero is an AI-generated 3D studio still life served locally from public/images/skillfoundry-3d-studio.png. The learning grid restores the three photographs already included in this project. Decorative workflow illustrations remain lightweight SVG; imagery is concentrated in the hero and learning grid.
+

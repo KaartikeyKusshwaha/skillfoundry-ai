@@ -52,3 +52,36 @@ html[data-theme=dark] :is(.animals-theme,.learn-theme) :is(.hero-slide-controls 
 html[data-theme=dark] :is(.animals-theme,.learn-theme) .hero-slide-dots button.active { background:var(--accent)!important; }
 html[data-theme=dark] .animals-theme .hero-photo img { filter:brightness(.88); }
 html[data-theme=dark] :is(.animals-theme,.learn-theme) .drawer-close { color:var(--ink)!important; background:var(--soft)!important; border:1px solid var(--line); }
+/* Every filled button keeps a contrast-safe foreground during the slide fill. */
+.animals-theme .button-primary { --button-hover:#194B3E; }
+.animals-theme .button-accent { --button-hover:#FFA87D; }
+.animals-theme .button-danger { --button-hover:#8F211B; }
+.learn-theme .button-ink,.learn-theme .button-primary { --button-hover:#34276B; }
+.learn-theme .button-accent { --button-hover:#F4C344; }
+:is(.animals-theme,.learn-theme) .button:before { background:var(--button-hover,transparent)!important; }
+:is(.animals-theme,.learn-theme) :is(.button-secondary,.button-ghost):before { content:none; }
+.animals-theme .button-primary:hover { color:#FFFFFF; background:#10332E; }
+.animals-theme .button-accent:hover { color:#10332E; background:#F08A5D; }
+.animals-theme .button-danger:hover { color:#FFFFFF; background:#B3261E; }
+.learn-theme .button-ink:hover { color:#FFFFFF; background:#1E1B4B; }
+.learn-theme .button-accent:hover { color:#1E1B4B; background:#FFB800; }
+html[data-theme=dark] .animals-theme :is(.button-primary,.button-ink) { --button-hover:#BAE4CC; }
+html[data-theme=dark] .learn-theme :is(.button-primary,.button-ink) { --button-hover:#D9CFFF; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .button-accent { --button-hover:#FFE09A; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .button-danger { --button-hover:#8F211B; }
+html[data-theme=dark] :is(.animals-theme,.learn-theme) .button:before { background:var(--button-hover,transparent)!important; }
+/* Substantial studio artwork and a single photographic learning grid. */
+.learn-theme .rendered-hero { min-height:430px; height:clamp(380px,34vw,520px); overflow:hidden; border:1px solid var(--line); border-radius:24px; }
+.rendered-still-life { position:relative; width:100%; height:100%; margin:0; }
+.rendered-still-life img { object-fit:cover; }
+.rendered-hero .cohort-pill { bottom:16px; right:16px; padding:11px 14px; border-radius:12px; }
+.learn-theme .outcomes-grid { gap:24px; border:0; }
+.learn-theme .outcome-card,.learn-theme .outcome-card:first-child { padding:0 0 18px; border:0; }
+.outcome-photo { position:relative; width:100%; aspect-ratio:1.65; overflow:hidden; margin-bottom:22px; border-radius:16px; }
+.outcome-photo img { object-fit:cover; transition:transform .4s ease; }
+.outcome-card:hover .outcome-photo img { transform:scale(1.025); }
+.learn-theme .outcome-card h3 { margin-bottom:9px; }
+.learn-theme .outcome-card p { max-width:340px; }
+@media (max-width:1023px) { .learn-theme .rendered-hero { min-height:360px; height:420px; }.rendered-still-life img { object-position:center; } }
+@media (max-width:700px) { .learn-theme .rendered-hero { min-height:290px; height:320px; }.learn-theme .outcomes-grid { gap:28px; }.outcome-photo { aspect-ratio:1.7; margin-bottom:16px; }.rendered-hero .cohort-pill { font-size:11px; bottom:12px; right:12px; } }
+@media (prefers-reduced-motion:reduce) { .outcome-photo img { transition:none; }.outcome-card:hover .outcome-photo img { transform:none; } }
