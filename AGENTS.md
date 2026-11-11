@@ -29,6 +29,12 @@ only runs for fine pointers.
 Animate only hero and grid reveals, once, with a 12px rise and 500ms fade; in
 reduced-motion mode use opacity only. Hover feedback must not cause layout
 shift. Route pages need their own title, description, Open Graph image and
-favicon. Navigation is full-bleed, sticky and blurred, marks the active
+favicon. Navigation is a compact, nearly full-width floating bar with rounded
+corners, a translucent surface and backdrop blur. It stays sticky and marks the active
 section, and accounts for anchor scroll offset. Implement only the explicit
 R1 page requirements; keep sample-data and prototype disclosures clear.
+
+The animal-care and education prototypes are separate websites: do not link
+their navigation or footers to one another. Keep full-width section backgrounds,
+and use only a few lightweight isometric illustrations where they support the
+care categories or learning steps; do not fill every section with imagery.

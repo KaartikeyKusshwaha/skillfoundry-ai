@@ -23,7 +23,7 @@ Built with Next.js App Router, React, TypeScript, Lucide icons and responsive CS
 - `/privacy`: prototype enquiry data notice.
 - `/api/leads`: validates enquiry steps and optionally forwards to `LEADS_WEBHOOK_URL`.
 
-Copy `.env.example` to `.env.local` only if configuring optional lead forwarding. Enquiries are temporary in-memory prototype data; no payment, confirmed seat or email delivery is provided. Programme details are sample content. Set `NEXT_PUBLIC_ANIMAL_SITE_URL` to change the companion animal-site link.
+Copy `.env.example` to `.env.local` only if configuring optional lead forwarding. Enquiries are temporary in-memory prototype data; no payment, confirmed seat or email delivery is provided. Programme details are sample content.
 
 ## Checks
 
@@ -39,4 +39,4 @@ The browser suite includes axe accessibility scans and the relevant interaction 
 
 ## Deployment
 
-Import this repository into Vercel as a Next.js project. Use the repository root with `pnpm install` and `pnpm build`. The companion prototype is in [the other repository](https://github.com/KaartikeyKusshwaha/practo-for-animals). The AI carousel is a separate assignment deliverable.
+Import this repository into Vercel as a Next.js project. Use the repository root with `pnpm install` and `pnpm build`. The AI carousel is a separate assignment deliverable.
