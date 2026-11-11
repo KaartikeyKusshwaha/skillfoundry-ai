@@ -85,3 +85,31 @@ html[data-theme=dark] :is(.animals-theme,.learn-theme) .button:before { backgrou
 @media (max-width:1023px) { .learn-theme .rendered-hero { min-height:360px; height:420px; }.rendered-still-life img { object-position:center; } }
 @media (max-width:700px) { .learn-theme .rendered-hero { min-height:290px; height:320px; }.learn-theme .outcomes-grid { gap:28px; }.outcome-photo { aspect-ratio:1.7; margin-bottom:16px; }.rendered-hero .cohort-pill { font-size:11px; bottom:12px; right:12px; } }
 @media (prefers-reduced-motion:reduce) { .outcome-photo img { transition:none; }.outcome-card:hover .outcome-photo img { transform:none; } }
+/* Touch-friendly controls and safe-area spacing for phones and tablets. */
+@media (max-width:850px) {
+  .site-nav .theme-toggle,.site-nav .icon-button { min-width:44px; min-height:44px; width:44px; height:44px; flex-basis:44px; padding:10px; }
+  .site-nav .nav-links.open { max-height:calc(100dvh - 92px); overflow-y:auto; border-radius:16px; }
+  .drawer-close { min-width:44px; min-height:44px; display:grid; place-items:center; }
+  :is(.animals-theme,.learn-theme) :is(input,select,textarea) { font-size:16px; }
+  .hero-slide-controls button { min-width:44px; min-height:44px; }
+  .hero-slide-dots button { min-width:24px; min-height:44px; border-radius:0; background:transparent!important; position:relative; }
+  .hero-slide-dots button:after { content:""; width:8px; height:8px; position:absolute; left:8px; top:18px; background:var(--slate); border-radius:50%; }
+  .hero-slide-dots button.active:after { background:var(--ink); }
+  .story-tabs button,.story-actions a,.story-actions button,.emergency-call,.emergency-directions { min-height:44px; }
+  .footer-grid a,.footer-grid button { min-height:44px; display:inline-flex; align-items:center; }
+  .lead-dialog { padding-bottom:max(24px,env(safe-area-inset-bottom)); }
+}
+@media (max-width:700px) {
+  .animals-theme .site-nav,.learn-theme .site-nav { height:60px; margin-bottom:-68px; }
+  .site-nav .container.nav-inner { padding:0 10px; gap:5px; }
+  .story-content,.result-card-main,.hero-copy,.learn-hero-copy { min-width:0; }
+  .story-card h3,.result-title h2 { overflow-wrap:anywhere; }
+  .hero-slide-controls { max-width:100%; right:0; padding:3px; gap:3px; }
+  .hero-slide-dots { gap:0; }
+  .story-tabs { gap:8px; padding-left:0; padding-right:0; }
+  .story-tabs button { padding-left:3px; padding-right:3px; font-size:12px; }
+  .story-card { flex-direction:column; }
+  .story-actions { flex-wrap:wrap; }
+  .story-actions>* { min-width:110px; }
+}
+@media (max-width:360px) { .site-nav .animal-brand,.site-nav .learn-brand { font-size:13px; gap:6px; }.site-nav .animal-mark { width:24px; height:24px; }.editorial-title { font-size:40px!important; } }

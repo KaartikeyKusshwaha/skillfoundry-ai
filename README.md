@@ -48,3 +48,9 @@ Use the sun/moon control in the navigation to select light or dark mode. The sit
 ## Visual assets
 The sculptural hero is an AI-generated 3D studio still life served locally from public/images/skillfoundry-3d-studio.png. The learning grid restores the three photographs already included in this project. Decorative workflow illustrations remain lightweight SVG; imagery is concentrated in the hero and learning grid.
 
+
+## Mobile compatibility checks
+Touch controls use 44px targets and phone form fields use 16px text to avoid iOS input zoom. The mobile suite checks 320, 360, 390, 430, 768 and 1024px layouts in light/dark mode, menus, and portrait/landscape form or filter use in Chromium and WebKit. These are automated browser-engine tests, not physical iOS/Android device certification.
+Run: pnpm exec playwright install chromium webkit
+Then: pnpm exec playwright test --config playwright.mobile.config.ts
+
